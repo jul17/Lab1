@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+     <html>
+       <head>
+	    <meta charset="utf-8">
+	    <title>How Did WE Get Here?</title>
+	    <link rel="stylesheet" type="text/css" href="style.css">
+     </head>
+  <body>
+ 	 <div class="title1">
+   	     <p>You are here:<a href="">Home </a><a href="">Dive Into HTML</a></p>
+   	 </div>
+         <h1 style="text-align: center;">№1</h1>
+         <h1 style="text-align: center;">HOW DID WE GET HERE?</h1>
+     <div class="diving">
+         <h2 style="text-align: center; ">DIVING IN</h2>
+     </div>
+     <div class="first">
+         <p style="text-align: center;"><img src="img/R.jpg", height="80px", width="80px">ecently, I stumbled across a quote from a Mozilla developer <a href="">about the tension inherent in creating standards:</a></p>
+     </div>
+     
+      <div class="quote">
+      <blockquote>Implementations and specifications have to do a delicate dance   
+      	    together. You don’t want implementations to happen before the specification is finished, because people start depending on the details of implementations and that constrains the specification. However, you also don’t want the specification to be finished before there are implementations and author experience with those implementations, because you need the feedback. There is unavoidable tension here, but we just have to muddle on through.
+      </blockquote>
+      </div>
+
+     <div class="second">
+          Keep this quote in the back of your mind, and let me explain how HTML5 came to be.
+      </p>
+      </div>
+
+      <div class="img">
+             <img src="img/img.jpg", height="116", width="526" alt="monkey">
+      </div>
+
+      <div class="mime">
+            <h2 style="text-align: center; ">MiME TYPES</h2>
+     </div>
+
+     <div class="mime1">
+     	    <p>This book is about <abbr>HTML5</abbr>, not previous versions of <abbr>HTML</abbr>, and not any version of <abbr>XHTML</abbr>. But to understand the history of HTML5 and the motivations behind it, you need to understand a few technical details first. Specifically, MIME types.</p>	
+
+            <p>Every time your web browser requests a page, the web server sends “headers” before it sends the actual page markup. These headers are normally invisible, although there are web development tools that will make them visible if you’re interested. But the headers are important, because they tell your browser how to interpret the page markup that follows. The most important header is called Content-Type, and it looks like this:</p>
+     </div>
+
+        <div class="mime1">
+           <blockqute><pre>Content-Type: text/html</pre></blockqute>
+
+             <p>&#8220;<code>text/html</code>&#8221; is called the &#8220;content type&#8221; or &#8220;<abbr>MIME</abbr> type&#8221; of the page. This header is the <strong>only</strong> thing that determines what a particular resource truly is, and therefore how it should be rendered. Images have their own <abbr>MIME</abbr> types (<code>image/jpeg</code> for <abbr>JPEG</abbr> images, <code>image/png</code> for <abbr>PNG</abbr> images, and so on). JavaScript files have their own <abbr>MIME</abbr> type. <abbr>CSS</abbr> stylesheets have their own <abbr>MIME</abbr> type. Everything has its own <abbr>MIME</abbr> type. The web runs on <abbr>MIME</abbr> types.</p>
+
+             <p>Of course, reality is more complicated than that. The first generation of web servers (and I&#8217;m talking web servers from 1993) didn&#8217;t send the <code>Content-Type</code> header because it didn&#8217;t exist yet. (It wasn&#8217;t invented until 1994.) For compatibility reasons that date all the way back to 1993, some popular web browsers will ignore the <code>Content-Type</code> header under certain circumstances. (This is called &#8220;content sniffing.&#8221;) But as a general rule of thumb, everything you&#8217;ve ever looked at on the web &mdash; <abbr>HTML</abbr> pages, images, scripts, videos, PDFs, anything with a <abbr>URL</abbr> &mdash; has been served to you with a specific <abbr>MIME</abbr> type in the <code>Content-Type</code> header.
+
+             <p>Tuck that under your hat. We&#8217;ll come back to it.</p>
+
+              </div>
+
+              <div class="mime">
+                <h2 style="text-align: center; ">A LONG DICRESSION INTO HOW STANDERTS</h2>
+                <h2 style="text-align: center; ">ARE MADE</h2>
+             </div>
+
+             
+             	<p><img src="img/img1.jpg" class="on_the_rigght" height="396" width="365" alt="elefant">
+             
+
+             <div class="third">
+             	    <p>Why do we have an <img> element? That’s not a question you hear every day.
+             	     Obviously someone must have created it. These things don’t just appear out of nowhere. Every element, every attribute, every feature of HTML that you’ve ever used — someone created them, decided how they should work, and wrote it all down. These people are not gods, nor are they flawless. They’re just people. Smart people, to be sure. But just people.</p>
+
+             	    <p>One of the great things about standards that are developed “out in the open” is that you can go back in time and answer these kinds of questions. Discussions occur on mailing lists, which are usually archived and publicly searchable. So I decided to do a bit of “email archaeology” to try to answer the question, “Why do we have an <img> element?” I had to go back to before there was an organization called the World Wide Web Consortium (W3C). I went back to the earliest days of the web, when you could count the number of web servers with both hands and maybe a couple of toes.</p>
+
+             	    <p><i>(There are a number of typographical errors in the following quotes. I have decided to leave them intact for historical accuracy.)</i></p>
+
+             	    <p>On February 25, 1993,<a href=""> Marc Andreessen wrote:</a></p>
+             </div>
+
+               <div class="article1">
+               	   <p>I’d like to propose a new, optional <abbr>HTML</abbr> tag:</p>
+               	   <p>IMG</p>
+               	   <p>Required argument is SRC="url".</p>
+               	   <p>This names a bitmap or pixmap file for the browser to attempt to pull over the network and interpret as an image, to be embedded in the text at the point of the tag’s occurrence.</p>
+               	   <p>An example is:</p>
+               	   <p><code><"IMG SRC="file://foobar.com/foo/bar/blargh.xbm"></code></p>
+               	   <p>(There is no closing tag; this is just a standalone tag.)</p>
+               	   <p>This tag can be embedded in an anchor like anything else; when that happens, it becomes an icon that’s sensitive to activation just like a regular text anchor.</p>
+               	   <p>Browsers should be afforded flexibility as to which image formats they support. Xbm and Xpm are good ones to support, for example. If a browser cannot interpret a given format, it can do whatever it wants instead (X Mosaic will pop up a default bitmap as a placeholder).</p>
+               	   <p>This is required functionality for X Mosaic; we have this working, and we’ll at least be using it internally. I’m certainly open to suggestions as to how this should be handled within HTML; if you have a better idea than what I’m presenting now, please let me know. I know this is hazy wrt image format, but I don’t see an alternative than to just say “let the browser do what it can” and wait for the perfect solution to come along (MIME, someday, maybe).</p>
+               </div>
+
+               <div class="first">
+                  <p><a href="">Xbm </a>and <a href="">Xpm </a>were popular graphics formats on Unix systems</p>
+
+                  <p>“Mosaic” was one of the earliest web browsers. (“X Mosaic” was the version that ran on Unix systems.) When he wrote this message in early 1993,
+                   <a href="">Marc Andreessen</a> had not yet founded the company that made him famous, <a href="">Mosaic Communications Corporation</a>, nor had he started work on that company’s flagship product, “Mosaic Netscape.” (You may know them better by their later names, “Netscape Corporation” and “Netscape Navigator.”)</p>
+                   <p>A few hours later, <a href="">Tony Johnson replied:</a></p>
+
+               </div>
+
+               <div class="article1">
+               	I have something very similar in Midas 2.0 (in use here at SLAC, and due for public release any week now), except that all the names are different, and it has an extra argument NAME="name". It has almost exactly the same functionality as your proposed IMG tag. e.g.
+
+               	<p><code><"ICON name="NoEntry" href="http://note/foo/bar/NoEntry.xbm"></code></p>
+               	<p>The idea of the name parameter was to allow the browser to have a set of “built in” images. If the name matches a “built in” image it would use that instead of having to go out and fetch the image. The name could also act as a hint for “line mode” browsers as to what kind of a symbol to put in place of the image.</p>
+
+               	<p>I don’t much care about the parameter or tag names, but it would be sensible if we used the same things. I don’t much care for abbreviations, ie why not IMAGE= and SOURCE=. I somewhat prefer ICON since it imlies that the IMAGE should be smallish, but maybe ICON is an overloaded word?</p>
+               </div>
+               
+               <div class="diving">
+               <h2 style="text-align: center; ">FURTHER READING</h2></div>
+               <p style="margin-bottom: 70px">
+
+               <div class="article1">
+               	<ul>
+               		<li>T<a href="">he History of the Web</a>, an old draft by Ian Hickson</li>
+               		<li><a href="">HTML/History</a>, by Michael Smith, Henri Sivonen, and others</li>
+               		<li><a href="">A Brief History of HTML</a>, by Scott Reynen</li>
+               		<p style="margin-bottom: 70px">
+               	</ul>
+               
+               <div style="border-color: black; border-style: solid;">
+               	<h4 style="margin: 0px; font-size: 50px; background: black; color: white">Did You Know?</h4>
+               	<div>
+               		<img src="img/img3.jpg" style="float: right; margin: 10px;
+               		width: auto; height: 200px" alt="boy">
+               		   <blockquote><p style="margin-top: 50px">In association with Google Press, O&#8217;Reilly is distributing this book in a variety of formats, including paper, ePub, Mobi, and <abbr>DRM</abbr>-free <addr>PDF</addr>. The paid edition is called “HTML5: Up & Running,” and it is available now. This chapter is included in the paid edition.</p>
+
+               			<p style="margin-bottom: 70px">If you liked this chapter and want to show your appreciation, you can buy “HTML5: Up & Running” with this affiliate link or <a href="">buy an electronic edition directly from O’Reilly.</a> You’ll get a book, and I’ll get a buck. I do not currently accept direct donations.</p>
+               		</blockquote>
+               	</div>
+               </div>
+           </div>
+
+              <p style="text-align: center">Copyright MMIX&ndash;MMXI <a href="">Mark Pilgrim</a>
+              <form action=http://www.google.com/cse><div><input type=hidden name=cx value=003903871671957224183:u1ldygxpsdm><input type=hidden name=ie value=UTF-8><input type=search name=q size=25 placeholder="powered by Google&trade;">&nbsp;<input type=submit name=sa value=Search></div></form></p>
+ 
+  </body>
+</html>

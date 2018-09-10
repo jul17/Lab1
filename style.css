@@ -1,0 +1,57 @@
+.title1{
+	margin-top: 30px;
+    margin-left: 50px;
+}
+
+.diving{
+	margin-top: 120px; 
+}
+
+.first{
+	margin-left: 150px;
+	margin-right: 200px;
+	font-size: 120%;
+}
+
+.quote{
+	margin-left: 150px;
+	margin-right: 200px;
+	font-size: 120%
+}
+.second{
+	margin-left: 186px;
+	margin-right: 186px;
+	font-size: 120%;
+}
+.img{
+    margin-left: 480px;
+	margin-right: 186px;
+}
+
+.mime{
+	margin-top: 120px; 
+}
+
+.mime1{
+	margin-left: 150px;
+	margin-right: 200px;
+	font-size: 120%;
+}
+
+.third{
+	margin-left: 150px;
+	margin-right: 600px;
+    font-size: 120%;
+}
+
+img.on_the_rigght{
+	float: right;
+	margin: 0 0 30px 30px;
+	margin-right: 200px; 
+}
+
+.article1{
+	margin-left: 200px;
+	margin-right: 200px;
+    font-size: 120%;
+}
